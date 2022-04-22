@@ -21,3 +21,8 @@ def test_about_page_data(client):
     """This makes the index page"""
     response = client.get("/about")
     assert b"About" in response.data
+
+def test_request_of_index_page(client):
+    """This makes the index page"""
+    response = client.get("/")
+    assert response.status_code == 200
