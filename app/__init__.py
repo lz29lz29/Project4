@@ -6,6 +6,7 @@ from app.db import db
 from app.db.models import User
 from flask_bootstrap import Bootstrap5
 from app.simple_pages import simple_pages
+from app.auth import auth
 from app.context_processors import utility_text_processors
 
 
@@ -25,6 +26,7 @@ def create_app():
     db.init_app(app)
     bootstrap = Bootstrap5(app)
     app.register_blueprint(simple_pages)
+    app.register_blueprint(auth)
     app.context_processor(utility_text_processors)
     # add command function to cli commands
     app.cli.add_command(create_database)
