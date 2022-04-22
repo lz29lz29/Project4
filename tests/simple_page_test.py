@@ -26,3 +26,9 @@ def test_request_of_index_page(client):
     """This makes the index page"""
     response = client.get("/")
     assert response.status_code == 200
+
+
+def test_index_page_data(client):
+    """This makes the index page"""
+    response = client.get("/")
+    assert b"Index" in response.data
