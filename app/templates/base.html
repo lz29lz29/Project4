@@ -33,11 +33,12 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <div class="navbar-nav mr-auto">
 
-
+                        {{ render_nav_item('simple_pages.index','Home') }}
                         {{ render_nav_item('simple_pages.about','About') }}
                         {{ render_nav_item('simple_pages.welcome','Welcome') }}
                         {{ render_nav_item('auth.register','Register') }}
                         {{ render_nav_item('auth.login','Login') }}
+                        {{ render_nav_item('auth.logout','Logout') }}
                     </div>
                 </div>
                 <div class="navbar-nav d-flex">

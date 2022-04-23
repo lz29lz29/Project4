@@ -16,3 +16,9 @@ def test_register_example(client):
     """This makes the index page"""
     response = client.get("/auth/register")
     assert response.status_code == 200
+
+
+def test_logout_example(client):
+    """This makes the index page"""
+    response = client.get("/auth/logout")
+    assert response.status_code == 200

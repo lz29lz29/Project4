@@ -18,6 +18,8 @@ def register():
     return render_template('register.html')
 
 
-
+@auth.route('/logout')
+def logout():
+    return render_template('logout.html')
 
 
