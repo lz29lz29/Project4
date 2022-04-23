@@ -10,3 +10,9 @@ def test_login_example(client):
     """This makes the index page"""
     response = client.get("/auth/login")
     assert b"login" in response.data
+
+
+def test_register_example(client):
+    """This makes the index page"""
+    response = client.get("/auth/register")
+    assert response.status_code == 200
