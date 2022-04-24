@@ -23,3 +23,8 @@ def logout():
     return render_template('logout.html')
 
 
+@auth.route('/dashboard')
+def dashboard():
+    return render_template('dashboard.html')
+
+
