@@ -31,6 +31,16 @@ def test_query_user(application):
         user1 = User.query.filter_by(email='aaa111@google.com').first()
         assert user1.email == 'aaa111@google.com'
 
+def test_query_balance(application):
+
+    with application.app_context():
+        user = User('aaa111@google.com', 'zxc123')
+        db.session.add(user)
+        db.session.commit()
+        user1 = User.query.filter_by(email='aaa111@google.com').first()
+        assert user1.email == 'aaa111@google.com'
+        assert user1.balance == 0.0
+
 
 def test_add_transaction(application):
 
