@@ -20,3 +20,13 @@ def test_adding_user(application):
         db.session.add(user)
         db.session.commit()
         assert db.session.query(User).count() == 1
+
+
+def test_query_user(application):
+
+    with application.app_context():
+        user = User('aaa111@google.com', 'zxc123')
+        db.session.add(user)
+        db.session.commit()
+        user1 = User.query.filter_by(email='aaa111@google.com').first()
+        assert user1.email == 'aaa111@google.com'
