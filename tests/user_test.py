@@ -53,3 +53,16 @@ def test_delete_user(application):
         assert db.session.query(User).count() == 1
         db.session.delete(user)
         assert db.session.query(User).count() == 0
+
+
+def test_add_transactions(application):
+
+    with application.app_context():
+        user = User('aaa111@google.com', 'zxc123')
+        db.session.add(user)
+        db.session.commit()
+        user1 = User.query.filter_by(email='aaa111@google.com').first()
+        user1.transactions = [Transaction("200","CREDIT"), Transaction("100","CREDIT")]
+        db.session.commit()
+        assert db.session.query(Transaction).count() == 2
+
