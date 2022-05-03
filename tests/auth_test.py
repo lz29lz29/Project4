@@ -2,29 +2,29 @@
 
 def test_request_of_login_page(client):
     """This makes the index page"""
-    response = client.get("/auth/login")
+    response = client.get("/login")
     assert response.status_code == 200
 
 
 def test_login_example(client):
     """This makes the index page"""
-    response = client.get("/auth/login")
+    response = client.get("/login")
     assert b"login" in response.data
 
 
 def test_register_example(client):
     """This makes the index page"""
-    response = client.get("/auth/register")
+    response = client.get("/register")
     assert response.status_code == 200
 
 
 def test_logout_example(client):
     """This makes the index page"""
-    response = client.get("/auth/logout")
-    assert response.status_code == 200
+    response = client.get("/logout")
+    assert response.status_code == 302
 
 
 def test_dashboard_example(client):
     """This makes the index page"""
-    response = client.get("/auth/dashboard")
-    assert response.status_code == 200
+    response = client.get("/dashboard")
+    assert response.status_code == 302
