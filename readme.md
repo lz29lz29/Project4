@@ -2,7 +2,7 @@
 
 [![Production Workflow](https://github.com/lz29lz29/Project4/actions/workflows/prod.yml/badge.svg)](https://github.com/lz29lz29/Project4/actions/workflows/prod.yml)
 
-* [Production Deployment](https://kwilliam-prod.herokuapp.com/)
+* [Production Deployment](https://liming-p4-prod.herokuapp.com/)
 
 
 [![Development Workflow](https://github.com/lz29lz29/Project4/actions/workflows/dev.yml/badge.svg)](https://github.com/lz29lz29/Project4/actions/workflows/dev.yml)
