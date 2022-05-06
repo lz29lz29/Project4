@@ -7,7 +7,7 @@
 
 [![Development Workflow](https://github.com/lz29lz29/Project4/actions/workflows/dev.yml/badge.svg)](https://github.com/lz29lz29/Project4/actions/workflows/dev.yml)
 
-* [Developmental Deployment](https://kwilliam-dev.herokuapp.com/)
+* [Developmental Deployment](https://liming-p4-deve.herokuapp.com/)
 
 ## Setting up CI/CD
 
